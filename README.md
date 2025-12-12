@@ -67,4 +67,18 @@ Both ConfigMaps and Secrets can be mounted into pods as either environment varia
 # What are services?
 
 Services are a networking abstraction used to group a set of workloads behind a single stable network endpoint.  
-A service will automatically distribute traffic to all the pods within its scope, taking into account 
+A service will automatically distribute traffic to all the pods within its scope, taking into account their readiness to serve requests.  
+
+Workloads within the cluster can access services exposed by other workloads, allowing them to be used for network calls across different applications.  
+
+This makes services a useful tool for establishing network connections between different applications, all without ever leaving the cluster.  
+
+# What is an ingress?
+
+While services are used to expose network endpoints inside the cluster, an ingress can be used to define an external network entry point 
+for connections from outside the cluster.  
+
+Ingress is a generic API, and its implementation will differ based on Kubernetes distribution in question.  
+
+However, ingresses most often represent some form of load balancer that processes network requests from outside the cluster, and routes them
+to one or more underlying services.  
