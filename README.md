@@ -32,4 +32,5 @@ You can think of nodes as dividing your cluster into fragments at a hardware lev
 Namespaces in Kubernetes allow us to split things at a logical level.  
 The majority of resource types in Kubernetes can be grouped together into namespaces.  
 
-Apart from keeping things organized, namespaces offer important security benefits. 
+Apart from keeping things organized, namespaces offer important **security** benefits, as they allow for finer control over various parts of the cluster, 
+and also make sure that certain resources .  
